@@ -17,7 +17,13 @@ const  Navbarlinks= [
             id:3,
             tittle:"shop",
             links:"#" 
-            }
+            },
+            {
+                id:4,
+                tittle:"Contact",
+                links:"#" 
+                }
+        
 ]
 
 const Navbar=() => {
