@@ -1,30 +1,7 @@
 import React from "react"
-
+// import Hero from "../Hero/Hero";
 import Logo from "../../assets/logo_2306634.png"
-
-const  Navbarlinks= [
-    {
-    id:1,
-    tittle:"home",
-    links:"/" 
-    },
-    {
-        id:2,
-        tittle:"feautures",
-        links:"#" 
-        },
-        {
-            id:3,
-            tittle:"shop",
-            links:"#" 
-            },
-            {
-                id:4,
-                tittle:"Contact",
-                links:"#" 
-                }
-        
-]
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar=() => {
     return <>
@@ -36,16 +13,11 @@ const Navbar=() => {
     </div>
     <div className="hidden md:block">
         <ul className="flex gap-3">
-            {
-            Navbarlinks.map((link) => {
-                return( 
-                    <li key={link.id}>
-                       <a className="hover:text-primary uppercase" href={link.link}>{link.tittle}</a> 
-                    
-
-                    </li>
-                );
-            })}
+            <Link to="/home" className="hover:text-primary uppercase">
+                Home
+              </Link>
+            <li>About</li>
+            <li>Contact</li>
         </ul>
     </div>
     <div>
